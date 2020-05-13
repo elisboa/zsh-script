@@ -19,7 +19,7 @@ if test -t 1; then
 exec zsh
 fi" > previa.txt
 cat ~/.bashrc >> previa.txt
-sudo mv previa.txt ~/.bashrc
+sudo mv previa.txt ~/.bashrc && exit
 
 #Instalação do ZSH
 cd ~
