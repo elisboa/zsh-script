@@ -13,7 +13,8 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt update && sudo apt install git zsh -y
 
 #Define o zsh como shell padrão
-sudo echo -e "# if running in terminal...
+sudo echo -e "
+# if running in terminal...
 if test -t 1; then
 # ...start zsh
 exec zsh
@@ -34,7 +35,8 @@ sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTO
 
 sed -i 's/robbyrussell/spaceship/' ~/.zshrc
 
-echo -e '#Configuração da interface
+echo -e '
+#Configuração da interface
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   dir           # Current directory section
@@ -57,7 +59,8 @@ SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 #Instalação do pluguins
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" -y
 
-echo -e "zinit light zdharma/fast-syntax-highlighting
+echo -e "
+zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions" >> ~/.zshrc 
 echo -e "Instalação concluída com sucesso!!\nFeito por: Erick Garcia"
