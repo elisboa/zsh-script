@@ -12,7 +12,7 @@ sudo apt update && sudo apt install git zsh -y
 sudo echo "# if running in terminal...
 if test -t 1; then
 # ...start zsh
-# exec zsh
+exec zsh
 fi" > previa.txt
 cat ~/.bashrc >> previa.txt
 sudo mv previa.txt ~/.bashrc
@@ -30,7 +30,7 @@ sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTO
 
 sed -i 's/robbyrussell/spaceship/' ~/.zshrc
 
-echo '#Configuração da interface do terminal
+sudo echo '#Configuração da interface do terminal
 SPACESHIP_PROMPT_ORDER=(
    user          # Username section
    dir           # Current directory section
@@ -53,9 +53,7 @@ SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 #Instalação do pluguins
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" -y
 
-sed -i 's/#exec zsh/exec zsh/' ~/.bashrc
-
-echo "
+sudo echo "
 ### End of ZInit's installer chunk
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
