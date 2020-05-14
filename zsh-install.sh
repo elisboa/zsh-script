@@ -12,7 +12,7 @@ sudo apt update && sudo apt install git zsh -y
 sudo echo "# if running in terminal...
 if test -t 1; then
 # ...start zsh
-exec zsh
+# exec zsh
 fi" > previa.txt
 cat ~/.bashrc >> previa.txt
 sudo mv previa.txt ~/.bashrc
@@ -20,7 +20,8 @@ sudo mv previa.txt ~/.bashrc
 #Instalação do ZSH
 cd ~
 
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
+#sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
+sudo ./install.sh
 
 cd ~
 
@@ -51,7 +52,9 @@ SPACESHIP_CHAR_SYMBOL="->"
 SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 
 #Instalação do pluguins
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" -y
+./install.sh
+
+#sed -i 's/#exec zsh/exec zsh/' ~/.bashrc
 
 echo "zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
