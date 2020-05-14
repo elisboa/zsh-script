@@ -20,8 +20,7 @@ sudo mv previa.txt ~/.bashrc
 #Instalação do ZSH
 cd ~
 
-#sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
-sudo ~zsh-script/install.sh
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
 
 cd ~
 
@@ -52,12 +51,12 @@ SPACESHIP_CHAR_SYMBOL="->"
 SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 
 #Instalação do pluguins
-./install.sh
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" -y
 
-#sed -i 's/#exec zsh/exec zsh/' ~/.bashrc
+sed -i 's/#exec zsh/exec zsh/' ~/.bashrc
 
 echo "
-#Pluguins ZINIT
+### End of ZInit's installer chunk
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions" >> ~/.zshrc 
