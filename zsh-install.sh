@@ -56,7 +56,9 @@ SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 
 #sed -i 's/#exec zsh/exec zsh/' ~/.bashrc
 
-echo "zinit light zdharma/fast-syntax-highlighting
+echo "
+#Pluguins ZINIT
+zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions" >> ~/.zshrc 
 
