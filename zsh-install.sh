@@ -18,6 +18,4 @@ fi" > previa.txt
 cat ~/.bashrc >> previa.txt
 sudo mv previa.txt ~/.bashrc
 
-sed -i 's/robbyrussell/spaceship/' ~/.zshrc
-
 echo "Instalação concluída com sucesso!!\nFeito por: Erick Garcia"

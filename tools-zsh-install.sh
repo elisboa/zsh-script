@@ -11,15 +11,6 @@ exec zsh
 
 cd ~
 
-#Instalação do Spaceship Theme
-cd ~
-
-sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-
-sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-sed -i 's/robbyrussell/spaceship/' ~/.zshrc
-
 #Instalação do Zinit com plubuins
 ZINIT_HOME="${ZINIT_HOME:-$ZPLG_HOME}"
 if [ -z "$ZINIT_HOME" ]; then
@@ -189,5 +180,14 @@ For more information see:
 - [38;5;226mFor-Syntax[0m article on the Wiki; it is less directly related to the ices, however, it explains how to use them conveniently:
     - https://zdharma.org/zinit/wiki/For-Syntax/.
 EOF
+
+#Instalação do Spaceship Theme
+cd ~
+
+sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+
+sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+sed -i 's/robbyrussell/spaceship/' ~/.zshrc
 
 echo "Instalação concluída com sucesso!!\nFeito por: Erick Garcia"
