@@ -3,7 +3,7 @@
 ## Execute o script de instalação do ZSH
 
 ```bash
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/zsh-install.sh)" -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/zsh-install.sh)" -y
 ```
 
 Feche o terminal, e abra novamente, aprecerá a seguinte mensagem, entre com a opção 2 e tecle enter.
