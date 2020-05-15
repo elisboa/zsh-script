@@ -7,10 +7,6 @@ cd ~
 
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
 
-exec zsh
-
-cd ~
-
 #Instalação do Zinit com plubuins
 ZINIT_HOME="${ZINIT_HOME:-$ZPLG_HOME}"
 if [ -z "$ZINIT_HOME" ]; then
@@ -81,7 +77,6 @@ if [ $RCUPDATE -eq 1 ]; then
     echo "[34m▓▒░[0m Updating $THE_ZDOTDIR/.zshrc (10 lines of code, at the bottom)"
     ZINIT_HOME="$(echo $ZINIT_HOME | sed "s|$HOME|\$HOME|")"
     command cat <<-EOF >> "$THE_ZDOTDIR/.zshrc"
-
 #Configuração da interface spaceship do terminal
 SPACESHIP_PROMPT_ORDER=(
    user          # Username section
@@ -184,10 +179,10 @@ EOF
 #Instalação do Spaceship Theme
 cd ~
 
-# sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 
-# sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
-# sed -i 's/robbyrussell/spaceship/' ~/.zshrc
+sed -i 's/robbyrussell/spaceship/' ~/.zshrc
 
 echo "Instalação concluída com sucesso!!\nFeito por: Erick Garcia"
