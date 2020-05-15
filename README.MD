@@ -2,6 +2,8 @@
 
 ## Dê permissão a pasta
 
+O comando abaixo habilita a permissão de execução e escrita do script para todos usuários.
+
 ```bash
 sudo chmod a+x zsh.script/*
 ```
