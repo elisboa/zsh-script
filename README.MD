@@ -1,23 +1,9 @@
-# Como executar o script
+# Instalação
 
-## Dê permissão a pasta
-
-O comando abaixo habilita a permissão de execução e escrita do script para todos usuários.
+## Execute o script de instalação direto
 
 ```bash
-sudo chmod a+x zsh.script/*
-```
-
-## Entre no diretório
-
-```bash
-cd zsh-script/
-```
-
-## Execute o script
-
-```bash
-./zsh-install.sh
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/zsh-install.sh)" -y
 ```
 
 Nessa tela abaixo, digite 

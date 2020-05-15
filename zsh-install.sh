@@ -14,8 +14,8 @@ if test -t 1; then
 # ...start zsh
 exec zsh
 fi" > previa.txt
-cat ~/.bashrc >> previa.txt
-echo previa > ~/.bashrc
+sudo cat ~/.bashrc >> previa.txt
+sudo cat previa.txt > ~/.bashrc
 
 #Instalação do ZSH
 cd ~
