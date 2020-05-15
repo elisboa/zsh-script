@@ -9,13 +9,13 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt update && sudo apt install git zsh -y
 
 #Define o zsh como shell padrão
-sudo echo "# if running in terminal...
+sudo echo -e "# if running in terminal...
 if test -t 1; then
 # ...start zsh
 exec zsh
 fi" > previa.txt
-sudo cat ~/.bashrc >> previa.txt
-sudo cat previa.txt >> ~/.bashrc
+cat ~/.bashrc >> previa.txt
+sudo mv previa.txt ~/.bashrc
 
 #Instalação do ZSH
 cd ~
