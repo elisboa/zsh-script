@@ -18,5 +18,13 @@ cd zsh-script/
 ./zsh-install.sh
 ```
 
+Nessa tela abaixo, digite 
+
+```bash 
+exit 
+```
+
+![](/.github/exit.png)
+
 Confirme o que for necessário durante a execução e pronto, está tudo configurado,
 pode fechar o terminal e abrir novamente que começará a instalação dos pluguins.
