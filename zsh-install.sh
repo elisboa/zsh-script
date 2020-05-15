@@ -15,7 +15,7 @@ if test -t 1; then
 exec zsh
 fi" > previa.txt
 sudo cat ~/.bashrc >> previa.txt
-sudo cat previa.txt > ~/.bashrc
+sudo cat previa.txt >> ~/.bashrc
 
 #Instalação do ZSH
 cd ~
@@ -24,9 +24,9 @@ sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zs
 
 cd ~
 
-sudo `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`
+sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 
-sudo `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
+sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 sed -i 's/robbyrussell/spaceship/' ~/.zshrc
 
