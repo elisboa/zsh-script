@@ -18,4 +18,4 @@ fi" > previa.txt
 cat ~/.bashrc >> previa.txt
 sudo mv previa.txt ~/.bashrc
 
-echo -e "Instalação concluída com sucesso!!\nFeito por: Erick Garcia"
+echo "Instalação concluída com sucesso!!\nFeito por: Erick Garcia"
