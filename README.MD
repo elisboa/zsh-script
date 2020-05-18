@@ -6,13 +6,9 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/zsh-install.sh)" -y
 ```
 
-Feche o terminal, e abra novamente, aprecerá a seguinte mensagem, entre com a opção 2 e tecle enter.
+Entre com a opção 2 e tecle enter.
 
 ![](/.github/default.png)
-
-
-Confirme o que for necessário durante a execução e pronto, está tudo configurado,
-pode fechar o terminal e abrir novamente que começará a instalação dos pluguins.
 
 ## Execute o script de instalação do ZSH Tools + Pluguins
 
@@ -20,8 +16,10 @@ pode fechar o terminal e abrir novamente que começará a instalação dos plugu
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/tools-zsh-install.sh)" -y
 ```
 
-Presete atenção, pedirá confirmação de senha do sudo , está tudo configurado,
-pode fechar o terminal e abrir novamente que começará a instalação dos pluguins.
+Presete atenção, pedirá confirmação de senha do sudo, e confirmação do shell com `y`, após isso está tudo configurado, pode fechar o terminal e abrir novamente que começará a instalação dos pluguins.
+
+![](/.github/yes.png)
+
 
 ## Pluguins inclusos
 

@@ -17,3 +17,5 @@ exec zsh
 fi" > previa.txt
 cat ~/.bashrc >> previa.txt
 sudo mv previa.txt ~/.bashrc
+
+exec zsh
