@@ -20,13 +20,13 @@ pode fechar o terminal e abrir novamente que começará a instalação dos plugu
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/tools-zsh-install.sh)" -y
 ```
 
-Confirme o que for necessário durante a execução e pronto, está tudo configurado,
+Presete atenção, pedirá confirmação de senha do sudo , está tudo configurado,
 pode fechar o terminal e abrir novamente que começará a instalação dos pluguins.
 
 ## Pluguins inclusos
 
 Esses são os plugins inclusos e abaixo explico como funciona cada um deles:
 
-- `zdharma/fast-syntax-highlighting`: Adiciona syntax highlighting na hora da escrita de comandos que facilita principalmente em reconhecer comandos que foram digitados de forma incorreta;
-- `zsh-users/zsh-autosuggestions`: Sugere comandos baseados no histórico de execução conforme você vai digitando;
+- `zdharma/fast-syntax-highlighting`: Adiciona syntax highlighting na hora da escrita de comandos que facilita principalmente em reconhecer comandos que foram digitados de forma incorreta.
+- `zsh-users/zsh-autosuggestions`: Sugere comandos baseados no histórico de execução conforme você vai digitando.
 - `zsh-users/zsh-completions`: Adiciona milhares de completitions para ferramentas comuns como Yarn, Homebrew, NVM, Node, etc, para você precisar apenas apertar TAB para completar comandos.

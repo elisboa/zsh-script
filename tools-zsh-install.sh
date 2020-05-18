@@ -20,7 +20,7 @@ sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/
 sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 #Editar o ~/.zshrc para setar o tema para fino
-sed -i 's/robbyrussell/fino/' ~/.zshrc
+sed -i 's/robbyrussell/spaceship/' ~/.zshrc
 
 #Adição de configuração do spaceship no arquivo ~/.zshrc
 sudo echo '#Configuração da interface do terminal
