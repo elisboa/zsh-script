@@ -11,6 +11,7 @@
   - [Execute o script de instalação do ZSH](#execute-o-script-de-instala%c3%a7%c3%a3o-do-zsh)
     - [Execute o script de instalação do ZSH Tools + Pluguins](#execute-o-script-de-instala%c3%a7%c3%a3o-do-zsh-tools--pluguins)
     - [Tema Spaceship](#tema-spaceship)
+    - [Instalando](#instalando)
     - [Crie o link simbólico](#crie-o-link-simb%c3%b3lico)
     - [Ativando o tema](#ativando-o-tema)
     - [Pluguins inclusos](#pluguins-inclusos)
@@ -80,7 +81,62 @@ Presete atenção, pedirá confirmação de senha do sudo, e confirmação do sh
 
 ### Tema Spaceship
 
-Execute o comando
+<h1 align="center">
+  <a href="https://github.com/denysdovhan/spaceship-prompt">
+    <img alt="spaceship →~ prompt" src="https://cloud.githubusercontent.com/assets/3459374/21679181/46e24706-d34b-11e6-82ee-5efb3d2ba70f.png" width="400">
+  </a>
+  <br>🚀⭐ Spaceship ZSH <br>
+</h1>
+
+<h4 align="center">
+  <a href="http://zsh.org" target="_blank"><code>Zsh</code></a> prompt for Astronauts.
+</h4>
+
+<p align="center">
+  <!-- NPM Version -->
+    <a href="https://npmjs.org/package/spaceship-prompt">
+    <img src="https://img.shields.io/npm/v/spaceship-prompt.svg?style=flat-square"
+      alt="NPM Version" />
+  </a>
+
+  <a href="https://travis-ci.org/denysdovhan/spaceship-prompt">
+    <img src="https://img.shields.io/travis/denysdovhan/spaceship-prompt.svg?style=flat-square"
+      alt="CI Status" />
+  </a>
+
+  <a href="http://zsh.org/">
+    <img src="https://img.shields.io/badge/zsh-%3E%3Dv5.2-777777.svg?style=flat-square"
+      alt="Zsh Version" />
+  </a>
+
+  <a href="https://twitter.com/SpaceshipZSH">
+    <img src="https://img.shields.io/badge/twitter-%40SpaceshipZSH-00ACEE.svg?style=flat-square"
+      alt="Spaceship ZSH Twitter" />
+  </a>
+
+  <a href="https://patreon.com/denysdovhan">
+    <img src="https://img.shields.io/badge/support-patreon-F96854.svg?style=flat-square"
+      alt="Donate" />
+  </a>
+</p>
+
+<div align="center">
+  <h4>
+    <a href="https://denysdovhan.com/spaceship-prompt/">Website</a> |
+    <a href="#instalando">Instalando</a> |
+    <a href="https://github.com/denysdovhan/spaceship-prompt/blob/master/README.md#features">Features</a> |
+    <a href="https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md">Opções</a> |
+    <a href="https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/API.md">API</a>
+  </h4>
+</div>
+
+<div align="center">
+  <sub>Built with ❤︎ by
+  <a href="https://denysdovhan.com">Denys Dovhan</a> and
+  <a href="https://github.com/denysdovhan/spaceship-prompt/graphs/contributors">contributors </a>
+</div>
+
+### Instalando
 
 ```bash
 sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
