@@ -1,6 +1,7 @@
 **Índice**
 
 - [Requisitos mínimos](#requisitos-m%c3%adnimos)
+  - [Visual Studio Code + Remote WSL](#visual-studio-code--remote-wsl)
   - [Baixe e instale a fonte FiraCode Light TTF](#baixe-e-instale-a-fonte-firacode-light-ttf)
   - [Habilite o Hyper-V e o WSL via Powershell Admin](#habilite-o-hyper-v-e-o-wsl-via-powershell-admin)
   - [Instale uma Distro linux](#instale-uma-distro-linux)
@@ -23,7 +24,13 @@
 - - Subsistema do Windows para Linux ativado
 - - Uma distribuição Linux instalada
 - - Fonte Firacode instalado
+- - Visual Studio Code
 - Uma distribuição linux instalada
+
+## Visual Studio Code + Remote WSL
+
+Baixe e instale o <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>. 
+Após instalar o VS Code, instale também um pluguin chamado <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL </a>. Ele servirá para abrir e editar arquivos do Linux de forma visual, sem precisar utilizar nano, vim e afins. O atalho para salvar arquivos que fora editados é `Ctrl + S`
 
 ## Baixe e instale a fonte FiraCode Light TTF
 <a href="https://github.com/tonsky/FiraCode/releases/download/4/Fira_Code_v4.zip"><img src="https://raw.githubusercontent.com/tonsky/FiraCode/master/extras/download.png" width="520" height="130"></a>
@@ -34,9 +41,14 @@
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
+![](/.github/pws1.png)
+
 ```pws
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
+
+![](/.github/pws2.png)
+
 **OBS: Algumas máquinas é necessário habilitar a virtualização na bios também**
 
 ## Instale uma Distro linux
@@ -48,12 +60,18 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 ## Atualizando o Kernel Linux no Windows
 
-Caso você não faça parte do Windows Insider, você pode entrar utilizando o arquivo <a href="https://github.com/ErickRock/zsh-script/releases/download/3.1/insiderlocalacc.bat">insiderlocalacc.bat </a>, recomendo que use o canal release preview, por ter menos bugs.
+Caso você não faça parte do Windows Insider, você pode entrar utilizando o arquivo <a href="https://github.com/ErickRock/zsh-script/releases/download/3.1/insiderlocalacc.bat">insiderlocalacc.bat </a>, recomendo que use o canal release preview, por ter menos bugs e sempre estar muito próxima da versão Pública.
 Após atualizar o sistema, atualize o Kernel do Linux no Windows, <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">Baixe o pacote de Baixe o pacote de atualização do último kernel do Linux para o WSL 2 para computadores x64</a>.
 
 ### Migrar a distro Existente para WSL 2 (Utilizará o Kernel nativo do Linux no Windows)
 
-Com o update instalado, execute o Powershell como Admin e digite `wsl -l -v`, este comando listará suas distros Linux instaladas, e qual WSL está usando. Agora digite `wsl --set-version <distro name> 2` substitua distro name pelo nome da sua distro, sem os sinais <> ,a migração para WSL 2 iniciará, e ao fim disso poderá usar o Linux no Windows 10x mais rápido do que a versão WSL 1 que estava instalada antes.
+Com o update instalado, execute o Powershell como Admin e digite `wsl -l -v`, este comando listará suas distros Linux instaladas, e qual WSL está usando. 
+
+![](/.github/wsl1.png)
+
+Agora digite `wsl --set-version <distro name> 2` substitua distro name pelo nome da sua distro, sem os sinais <> ,a migração para WSL 2 iniciará, e ao fim disso poderá usar o Linux no Windows 10x mais rápido do que a versão WSL 1 que estava instalada antes.
+
+![](/.github/wsl2.png)
 
 # Utilizando o Linux
 
@@ -65,6 +83,8 @@ Com todo ambiente instalado e configurado, você já pode abrir o Windows Termin
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/zsh-install.sh)" -y
 ```
 
+![](/.github/zshinstall.png)
+
 Entre com a opção 2 e tecle enter.
 
 ![](/.github/default.png)
@@ -74,6 +94,7 @@ Entre com a opção 2 e tecle enter.
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/tools-zsh-install.sh)" -y
 ```
+![](/.github/zshtools.png)
 
 Presete atenção, pedirá confirmação de senha do sudo, e confirmação do shell com `y`, após isso está tudo configurado, pode fechar o terminal e abrir novamente que começará a instalação dos pluguins.
 
@@ -141,16 +162,20 @@ Presete atenção, pedirá confirmação de senha do sudo, e confirmação do sh
 ```bash
 sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ```
+![](/.github/space-download.png)
 
 ### Crie o link simbólico
 
 ```bash
 sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
+![](/.github/space-link.png)
 
 ### Ativando o tema
 
 Digite code `code ~/.zshrc` e tecle enter que abrirá o VS Code para editar o arquivo, edite o campo `ZSH_THEME="fino"` para `ZSH_THEME="spaceship"` e salve. Pronto, você acabou de mudar o tema.
+
+![](/.github/spaceship.gif)
 
 ### Pluguins inclusos
 
@@ -163,3 +188,4 @@ Esses são os plugins inclusos e abaixo explico como funciona cada um deles:
 # Dicas
 
 Você pode acessar toda a estrutura de arquivos da Distro instalada no caminho `\\wsl$` da mesma forma que acessa um servidor, pasta e etc. É possível deixar um mapeamento de rede deste caminho caso preferir.
+
