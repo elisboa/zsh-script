@@ -9,18 +9,12 @@ cd ~
 
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
 
-#Instalação do Spaceship Theme
-#
-#Clona o tema Spaceship
-cd ~
-sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+exec zsh
 
-
-#Criação do link simbólico
-sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+exit
 
 #Editar o ~/.zshrc para setar o tema para fino
-sed -i 's/robbyrussell/spaceship/' ~/.zshrc
+sed -i 's/robbyrussell/fino/' ~/.zshrc
 
 #Adição de configuração do spaceship no arquivo ~/.zshrc
 sudo echo '#Configuração da interface do terminal
@@ -47,8 +41,14 @@ SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 #Instalação do Zinit com plubuins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
+exec zsh
+
+exit
+
 #Adição dos pluguins 
 sudo echo "zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions" >> ~/.zshrc
+
+exec zsh
 
