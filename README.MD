@@ -20,6 +20,23 @@ Presete atenção, pedirá confirmação de senha do sudo, e confirmação do sh
 
 ![](/.github/yes.png)
 
+## Tema Spaceship
+
+Execute o comando
+
+```bash
+sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+```
+
+## Crie o link simbólico
+
+```bash
+sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+```
+
+## Ativando o tema
+
+Digite code `~/.zshrc` abrirá o VS Code para editar o arquivo, edite o campo `ZSH_THEME="fino"` para `ZSH_THEME="spaceship"` e salve. Pronto, você acabou de mudar o tema.
 
 ## Pluguins inclusos
 
