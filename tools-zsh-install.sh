@@ -1,21 +1,16 @@
 #!/bin/bash
 # Script de instalação - ZSH Tools + Autocomplete 
 # Autor: Erick Garcia Kun
-# Descrição: Instalação do Oh-my-zsh Pluguins de autocomplete e tema Spaceship padrão
-
-cd ~
-
-#Instala ZSH Tools via curl
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
-
+# Descrição: Instalação do tema Spaceship padrão
+#
 #Instalação do Spaceship Theme
-cd ~
-
+#
 #Clona o tema Spaceship
+cd ~
 sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 
 
-#Essa parte por algum motivo não consegue realizar a criação de link simbólico
+#Criação do link simbólico
 sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 #Editar o ~/.zshrc para setar o tema para Spaceship
@@ -52,6 +47,19 @@ sudo echo "zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions" >> ~/.zshrc
 
-#Ao iniciar o terminal novamente, ele pode indicar erros como, sem permissão para criar diretórios, do script na do zinit, e até mesmo permissão negada ao criar links simbólicos
 
-echo "Instalação concluída com sucesso!!\nFeito por: Erick Garcia"
+printf "$GREEN"
+	cat <<-'EOF'
+		         __                                     __
+		  ____  / /_     ____ ___  __  __   ____  _____/ /_
+		 / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \
+		/ /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / /
+		\____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/
+		                        /____/                       ....Está instalado!
+
+
+		Você pode editar o arquivo ~/.zshrc para configurar pluguins, temas e opções.
+
+		p.s. Follow us on https://twitter.com/ohmyzsh
+      
+	EOF

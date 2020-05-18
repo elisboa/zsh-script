@@ -18,4 +18,18 @@ fi" > previa.txt
 cat ~/.bashrc >> previa.txt
 sudo mv previa.txt ~/.bashrc
 
-echo "Instalação concluída com sucesso!!\nFeito por: Erick Garcia"
+#Instala ZSH Tools via curl
+cd ~
+
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
+
+printf "$GREEN"
+	cat <<-'EOF'
+	
+		Você pode editar o arquivo ~/.zshrc para configurar pluguins, temas e opções.
+
+		p.s. Follow us on https://twitter.com/ohmyzsh
+
+    Instalação concluída com sucesso!!\nFeito por: Erick Garcia
+      
+	EOF
