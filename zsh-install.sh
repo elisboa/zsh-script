@@ -10,7 +10,7 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt update && sudo apt install git zsh -y
 
 #Define o zsh como shell padrão
-sudo echo -e "# if running in terminal...
+sudo echo "# if running in terminal...
 if test -t 1; then
 # ...start zsh
 exec zsh

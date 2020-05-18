@@ -17,7 +17,7 @@ pode fechar o terminal e abrir novamente que começará a instalação dos plugu
 ## Execute o script de instalação do ZSH Tools + Pluguins
 
 ```bash
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/tools-zsh-install.sh)" -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/tools-zsh-install.sh)" -y
 ```
 
 ## Nessa tela abaixo, digite 
