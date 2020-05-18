@@ -22,10 +22,8 @@ sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTO
 #Editar o ~/.zshrc para setar o tema para fino
 sed -i 's/robbyrussell/fino/' ~/.zshrc
 
-
 #Adição de configuração do spaceship no arquivo ~/.zshrc
-sudo echo "
-#Configuração da interface spaceship do terminal
+sudo echo '#Configuração da interface do terminal
 SPACESHIP_PROMPT_ORDER=(
    user          # Username section
    dir           # Current directory section
@@ -43,9 +41,7 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="->"
-SPACESHIP_CHAR_SUFFIX=" "" > previaZsh.txt
-cat ~/.zshrc >> previaZsh.txt
-sudo mv previa.txt ~/.zshrc
+SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 
 
 #Instalação do Zinit com plubuins
