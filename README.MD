@@ -7,14 +7,14 @@
   - [Instale o Windows Terminal](#instale-o-windows-terminal)
   - [Atualizando o Kernel Linux no Windows](#atualizando-o-kernel-linux-no-windows)
     - [Migrar a distro Existente para WSL 2 (Utilizará o Kernel nativo do Linux no Windows)](#migrar-a-distro-existente-para-wsl-2-utilizar%c3%a1-o-kernel-nativo-do-linux-no-windows)
-  - [Utilizando o Linux](#utilizando-o-linux)
+- [Utilizando o Linux](#utilizando-o-linux)
   - [Execute o script de instalação do ZSH](#execute-o-script-de-instala%c3%a7%c3%a3o-do-zsh)
-  - [Execute o script de instalação do ZSH Tools + Pluguins](#execute-o-script-de-instala%c3%a7%c3%a3o-do-zsh-tools--pluguins)
-  - [Tema Spaceship](#tema-spaceship)
-  - [Crie o link simbólico](#crie-o-link-simb%c3%b3lico)
-  - [Ativando o tema](#ativando-o-tema)
-  - [Pluguins inclusos](#pluguins-inclusos)
-    - [Dicas](#dicas)
+    - [Execute o script de instalação do ZSH Tools + Pluguins](#execute-o-script-de-instala%c3%a7%c3%a3o-do-zsh-tools--pluguins)
+    - [Tema Spaceship](#tema-spaceship)
+    - [Crie o link simbólico](#crie-o-link-simb%c3%b3lico)
+    - [Ativando o tema](#ativando-o-tema)
+    - [Pluguins inclusos](#pluguins-inclusos)
+- [Dicas](#dicas)
 
 # Requisitos mínimos
 - Windows 10 Versão 2004
@@ -54,7 +54,7 @@ Após atualizar o sistema, atualize o Kernel do Linux no Windows, <a href="https
 
 Com o update instalado, execute o Powershell como Admin e digite `wsl -l -v`, este comando listará suas distros Linux instaladas, e qual WSL está usando. Agora digite `wsl --set-version <distro name> 2` substitua distro name pelo nome da sua distro, sem os sinais <> ,a migração para WSL 2 iniciará, e ao fim disso poderá usar o Linux no Windows 10x mais rápido do que a versão WSL 1 que estava instalada antes.
 
-## Utilizando o Linux
+# Utilizando o Linux
 
 Com todo ambiente instalado e configurado, você já pode abrir o Windows Terminal, e iniciar a distro que instalou normalmente em novas abas.
 
@@ -68,7 +68,7 @@ Entre com a opção 2 e tecle enter.
 
 ![](/.github/default.png)
 
-## Execute o script de instalação do ZSH Tools + Pluguins
+### Execute o script de instalação do ZSH Tools + Pluguins
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/master/tools-zsh-install.sh)" -y
@@ -78,7 +78,7 @@ Presete atenção, pedirá confirmação de senha do sudo, e confirmação do sh
 
 ![](/.github/yes.png)
 
-## Tema Spaceship
+### Tema Spaceship
 
 Execute o comando
 
@@ -86,17 +86,17 @@ Execute o comando
 sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ```
 
-## Crie o link simbólico
+### Crie o link simbólico
 
 ```bash
 sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
 
-## Ativando o tema
+### Ativando o tema
 
 Digite code `code ~/.zshrc` e tecle enter que abrirá o VS Code para editar o arquivo, edite o campo `ZSH_THEME="fino"` para `ZSH_THEME="spaceship"` e salve. Pronto, você acabou de mudar o tema.
 
-## Pluguins inclusos
+### Pluguins inclusos
 
 Esses são os plugins inclusos e abaixo explico como funciona cada um deles:
 
@@ -104,6 +104,6 @@ Esses são os plugins inclusos e abaixo explico como funciona cada um deles:
 - `zsh-users/zsh-autosuggestions`: Sugere comandos baseados no histórico de execução conforme você vai digitando.
 - `zsh-users/zsh-completions`: Adiciona milhares de completitions para ferramentas comuns como Yarn, Homebrew, NVM, Node, etc, para você precisar apenas apertar TAB para completar comandos.
 
-### Dicas
+# Dicas
 
 Você pode acessar toda a estrutura de arquivos da Distro instalada no caminho `\\wsl$` da mesma forma que acessa um servidor, pasta e etc. É possível deixar um mapeamento de rede deste caminho caso preferir.
