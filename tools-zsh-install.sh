@@ -13,10 +13,24 @@ exec zsh
 
 exit
 
+#Instalação do Zinit com plubuins
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+
+exec zsh
+
+exit
+
+#Adição dos pluguins 
+sudo echo "zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions" >> ~/.zshrc
+
+exec zsh
+
 ##Não funciona daqui para baixo
 #
 #Editar o ~/.zshrc para setar o tema para fino
-sed -i 's/robbyrussell/fino/' ~/.zshrc
+#sed -i 's/robbyrussell/fino/' ~/.zshrc
 
 #Adição de configuração do spaceship no arquivo ~/.zshrc
 sudo echo '#Configuração da interface do terminal
@@ -40,16 +54,4 @@ SPACESHIP_CHAR_SYMBOL="->"
 SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 
 
-#Instalação do Zinit com plubuins
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
-exec zsh
-
-exit
-
-#Adição dos pluguins 
-sudo echo "zinit light zdharma/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions" >> ~/.zshrc
-
-exec zsh
