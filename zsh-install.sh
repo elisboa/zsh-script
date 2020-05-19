@@ -6,6 +6,7 @@
 cd ~ || exit
 
 
+
 for comando in "add-apt-repository ppa:git-core/ppa" "apt-get update -q" "apt-get upgrade -yq" 
 do
 
@@ -49,3 +50,7 @@ fi
 
 echo -e "Iniciando o ZSH: "
 zsh
+
+echo "\e[00;32mInstalação do Git e ZSH concluída com Êxito!!\e[00m"
+echo "\e[00;32mFeche o terminal e abra novamente!!\e[00m"
+

@@ -14,11 +14,23 @@ else
 
 fi
 
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 
 zsh
 
 exit # talvez esse exit deva ser removido
+
+##Não executa nada daqui para baixo
+#
+#Instalação do Zinit com plubuins
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+
+#Adição dos pluguins 
+sudo echo "zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions" >> ~/.zshrc
+
 
 #Editar o ~/.zshrc para setar o tema para fino
 sed -i 's/robbyrussell/fino/' ~/.zshrc
@@ -45,6 +57,7 @@ SPACESHIP_CHAR_SYMBOL="->"
 SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 
 
+
 #Instalação do Zinit com plubuins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
@@ -58,4 +71,3 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions" >> ~/.zshrc
 
 zsh
-
