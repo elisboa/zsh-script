@@ -9,13 +9,15 @@ sudo apt-get upgrade -y
 sudo add-apt-repository ppa:git-core/ppa 
 sudo apt update && sudo apt install git zsh -y
 
-#Define o zsh como shell padrão
-sudo echo "# if running in terminal...
-if test -t 1; then
-# ...start zsh
-exec zsh
-fi" > previa.txt
-cat ~/.bashrc >> previa.txt
-sudo mv previa.txt ~/.bashrc
+# Verifica se existe o zsh no sistema...
+if command -v zsh
+then
+    # Se sim, altera a shell padrão do usuário para o ZSH
+    sudo chsh -s "$(command -v zsh)" "$USER"
+else
+    # Senão, exibe mensagem de erro e sai
+    echo -e "Não foi encontrado o executável do ZSH no sistema, saindo com erro"
+    exit 1
+fi
 
-exec zsh
+exec "$(command -v zsh)"
