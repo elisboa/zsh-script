@@ -13,6 +13,7 @@ exec zsh
 
 exit
 
+##Não funciona daqui para baixo
 #Editar o ~/.zshrc para setar o tema para fino
 sed -i 's/robbyrussell/fino/' ~/.zshrc
 
