@@ -3,7 +3,7 @@
 # Autor: Erick Garcia Kun
 # Descrição: Instalação do Oh-my-zsh shell padrão
 
-cd ~ 
+cd ~ || exit
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo add-apt-repository ppa:git-core/ppa 
