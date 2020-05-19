@@ -5,18 +5,36 @@
 
 cd ~ || exit
 
-echo -e "Iniciando comando apt-get update... "
-if sudo apt-get update -q
-then
-    echo "SUCESSO"
-else
-    echo "FALHA"
-    exit 1
-fi
 
-sudo apt-get upgrade -y
-sudo add-apt-repository ppa:git-core/ppa 
-sudo apt update && sudo apt install git zsh -y
+for comando in "add-apt-repository ppa:git-core/ppa" "apt-get update -q" "apt-get upgrade -yq" 
+do
+
+    echo -e "Iniciando comando $comando... "
+    if sudo $comando
+    then
+        echo "SUCESSO"
+    else
+        echo "FALHA ao executar comando $comando"
+        exit 1
+    fi
+done
+
+for pacote in git zsh
+do
+    echo -ne "Iniciando instalação do pacote $pacote: "
+    if sudo apt-get install -yq $pacote
+    then
+        echo -e "SUCESSO"
+    else
+        echo -e "FALHA. Tentando recuperar quebra de pacotes"
+        if sudo apt-get install -f
+        then
+            echo  -e "Sucesso ao recuperar pacotes quebrados"
+        else
+            echo -e "Falha ao recuperar pacotes quebrados"
+        fi
+    fi
+done
 
 # Verifica se existe o zsh no sistema...
 if command -v zsh
@@ -29,4 +47,5 @@ else
     exit 1
 fi
 
-exec "$(command -v zsh)"
+echo -e "Iniciando o ZSH: "
+zsh
