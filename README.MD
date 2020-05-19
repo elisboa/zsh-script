@@ -61,7 +61,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 ## Atualizando o Kernel Linux no Windows
 
 Caso você não faça parte do Windows Insider, você pode entrar utilizando o arquivo <a href="https://github.com/ErickRock/zsh-script/releases/download/3.1/insiderlocalacc.bat">insiderlocalacc.bat </a>, recomendo que use o canal release preview, por ter menos bugs e sempre estar muito próxima da versão Pública.
-Após atualizar o sistema, atualize o Kernel do Linux no Windows, <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">Baixe o pacote de Baixe o pacote de atualização do último kernel do Linux para o WSL 2 para computadores x64</a>.
+Após atualizar o sistema, atualize o Kernel do Linux no Windows, <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">Baixe o pacote de atualização do último kernel do Linux para o WSL 2 para computadores x64</a>.
 
 ### Migrar a distro Existente para WSL 2 (Utilizará o Kernel nativo do Linux no Windows)
 
@@ -85,7 +85,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/maste
 
 ![](/.github/zshinstall.png)
 
-Entre com a opção 2 e tecle enter.
+Entre com a opção 2 e tecle enter. O terminal fechará no fim do processo. Abra ele novamente para continuar os comandos seguintes.
 
 ![](/.github/default.png)
 
