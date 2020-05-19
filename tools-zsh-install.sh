@@ -17,7 +17,7 @@ exit
 sed -i 's/robbyrussell/fino/' ~/.zshrc
 
 #Adição de configuração do spaceship no arquivo ~/.zshrc
-sudo echo '#Configuração da interface do terminal
+echo '#Configuração da interface do terminal
 SPACESHIP_PROMPT_ORDER=(
    user          # Username section
    dir           # Current directory section
