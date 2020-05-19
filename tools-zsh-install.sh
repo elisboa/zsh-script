@@ -9,22 +9,17 @@ cd ~
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-
 ##Não executa nada daqui para baixo
 #
 #Instalação do Zinit com plubuins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
-exec zsh
-
-exit
-
 #Adição dos pluguins 
-sudo echo "zinit light zdharma/fast-syntax-highlighting
+sudo echo "### End of Zinit's installer chunk
+zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions" >> ~/.zshrc
 
-exec zsh
 
 #Editar o ~/.zshrc para setar o tema para fino
 sed -i 's/robbyrussell/fino/' ~/.zshrc

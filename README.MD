@@ -100,6 +100,10 @@ Presete atenção, pedirá confirmação de senha do sudo, e confirmação do sh
 
 ![](/.github/yes.png)
 
+Nessa seguinte tela entre com `exit` e tecle enter para o sript continuar.
+
+![](/.github/exit.png)
+
 ### Tema Spaceship
 
 <h1 align="center">
