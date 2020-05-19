@@ -5,13 +5,20 @@
 #
 #
 #Instala ZSH Tools via curl
-cd ~ || exit
+if cd
+then
+   echo -e "Iniciando script $0"
+else
+   echo -e "Falha ao acessar diretório ${HOME}, saindo com erro"
+   exit 1
+
+fi
 
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
 
-exec zsh
+zsh
 
-exit
+exit # talvez esse exit deva ser removido
 
 #Editar o ~/.zshrc para setar o tema para fino
 sed -i 's/robbyrussell/fino/' ~/.zshrc
@@ -41,14 +48,14 @@ SPACESHIP_CHAR_SUFFIX=" "' >> ~/.zshrc
 #Instalação do Zinit com plubuins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
-exec zsh
+zsh
 
-exit
+exit # talvez esse exit deva ser removido
 
 #Adição dos pluguins 
-sudo echo "zinit light zdharma/fast-syntax-highlighting
+echo "zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions" >> ~/.zshrc
 
-exec zsh
+zsh
 
