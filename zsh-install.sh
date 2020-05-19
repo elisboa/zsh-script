@@ -18,4 +18,4 @@ fi" > previa.txt
 cat ~/.bashrc >> previa.txt
 sudo mv previa.txt ~/.bashrc
 
-exec zsh
+echo -e "\e[00;32mInstalação do Git e ZSH concluída com Êxcito!✅✅✅\e[00m"
