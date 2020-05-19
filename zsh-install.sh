@@ -4,7 +4,16 @@
 # Descrição: Instalação do Oh-my-zsh shell padrão
 
 cd ~ || exit
-sudo apt-get update
+
+echo -e "Iniciando comando apt-get update... "
+if sudo apt-get update -q
+then
+    echo "SUCESSO"
+else
+    echo "FALHA"
+    exit 1
+fi
+
 sudo apt-get upgrade -y
 sudo add-apt-repository ppa:git-core/ppa 
 sudo apt update && sudo apt install git zsh -y
