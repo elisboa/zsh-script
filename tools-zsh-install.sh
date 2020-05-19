@@ -7,12 +7,11 @@
 #Instala ZSH Tools via curl
 cd ~
 
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-exec zsh
 
-exit
-
+##Não executa nada daqui para baixo
+#
 #Instalação do Zinit com plubuins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
@@ -27,10 +26,8 @@ zinit light zsh-users/zsh-completions" >> ~/.zshrc
 
 exec zsh
 
-##Não funciona daqui para baixo
-#
 #Editar o ~/.zshrc para setar o tema para fino
-#sed -i 's/robbyrussell/fino/' ~/.zshrc
+sed -i 's/robbyrussell/fino/' ~/.zshrc
 
 #Adição de configuração do spaceship no arquivo ~/.zshrc
 sudo echo '#Configuração da interface do terminal
