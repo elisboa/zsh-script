@@ -19,7 +19,3 @@ cat ~/.bashrc >> previa.txt
 sudo mv previa.txt ~/.bashrc
 
 exec zsh
-
-exit
-
-exit
