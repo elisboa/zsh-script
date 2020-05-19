@@ -85,6 +85,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ErickRock/zsh-script/maste
 
 ![](/.github/zshinstall.png)
 
+Ao fim do comando, feche o terminal e abra novamente.
+
 Entre com a opção 2 e tecle enter. O terminal fechará no fim do processo. Abra ele novamente para continuar os comandos seguintes.
 
 ![](/.github/default.png)
